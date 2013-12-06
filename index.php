@@ -11,7 +11,7 @@
 							<b>Selling Date</b>
 						</div>
 						<div class="col-md-8">
-							<input type="date" class="datepicker">
+							<input type="date" id="date" class="datepicker">
 						</div>
 					</div>
 					<br/>
@@ -20,7 +20,7 @@
 							<b>Selling Purpose</b>
 						</div>
 						<div class="col-md-8">
-							<input type="text" class="form-control" placeholder="e.g. Tagbond Event">
+							<input type="text" id="purpose" class="form-control" placeholder="e.g. Tagbond Event">
 						</div>
 					</div>
 					<br/>
@@ -29,7 +29,7 @@
 							<b>Released To</b>
 						</div>
 						<div class="col-md-8">
-							<input type="text" class="form-control" placeholder="e.g. Jeff Dalawampu">
+							<input type="text" id="recipient" class="form-control" placeholder="e.g. Jeff Dalawampu">
 						</div>
 					</div>
 				</div>
@@ -79,6 +79,34 @@
 	<script src="js/bootstrap.min.js"></script>
 	<script>
 		$(document).ready(function(){
+			$('#date').val(new Date().toJSON().slice(0,10));
+			$field1 = false;
+			$field2 = false;
+			$particulars = false;
+			$('#purpose').keyup(function(){
+				if($(this).val() != ""){
+					$field1 = true;
+				}else{
+					$field1 = false;
+				}
+				if($particulars == true && $field1 == true && $field2 == true){
+					$('.submitField').show();
+				}else{
+					$('.submitField').hide();
+				}
+			});
+			$('#recipient').keyup(function(){
+				if($(this).val() != ""){
+					$field2 = true;
+				}else{
+					$field2 = false;
+				}
+				if($particulars == true && $field1 == true && $field2 == true){
+					$('.submitField').show();
+				}else{
+					$('.submitField').hide();
+				}
+			});
 			$("#qty").keypress(function (e) {
 				var txt = $("#recipient").val();
 				if (e.which != 8 && e.which != 0 && (e.which < 48 || e.which > 57)) {
@@ -91,13 +119,19 @@
 			$('.addParticular').on('click',function(){
 				if($('#qty').val() != "" && $('#size option:selected').val() != "" && $('#color option:selected').val() != "" && ($('#total').val() != "" || $('#total').val() != 0)){
 					$('.breakdown').append('<tr class="breakDownRow"><td><input type="text" class="chosen text-center" name="qty[]" value="'+$('#qty').val()+'" readonly></td><td><input type="text" class="chosen text-center" name="size[]" value="'+$('#size option:selected').val()+'" readonly></td><td><input type="text" class="chosen text-center" name="color[]" value="'+$('#color option:selected').val()+'" readonly></td><td><input type="text" class="chosen text-center" name="sub[]" value="'+$('#total').val()+'" readonly></td><td><i class="del glyphicon glyphicon-remove-circle"></i></td></tr>');
-					$('.submitField').show();
+					
 					$('#qty').val('');
 					$('#color').val('');
 					$('#size').val('');
 					$('#total').val('');
+					$particulars = true;
 				}else{
 					alert('Cannot add item')
+				}
+				if($particulars == true && $field1 == true && $field2 == true){
+					$('.submitField').show();
+				}else{
+					$('.submitField').hide();
 				}
 
 			});
@@ -108,6 +142,12 @@
 					$i++;
 				});
 				if($i == 0){
+					$particulars = false;
+					$('.submitField').hide();
+				}
+				if($particulars == true && $field1 == true && $field2 == true){
+					$('.submitField').show();
+				}else{
 					$('.submitField').hide();
 				}
 			});
