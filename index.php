@@ -11,7 +11,7 @@
 							<b>Selling Date</b>
 						</div>
 						<div class="col-md-8">
-							<input type="date" id="date" class="datepicker">
+							<input type="date" id="date" name="sellDate" class="datepicker">
 						</div>
 					</div>
 					<br/>
@@ -20,7 +20,7 @@
 							<b>Selling Purpose</b>
 						</div>
 						<div class="col-md-8">
-							<input type="text" id="purpose" class="form-control" placeholder="e.g. Tagbond Event">
+							<input type="text" id="purpose" name="sellPurpose" class="form-control" placeholder="e.g. Tagbond Event">
 						</div>
 					</div>
 					<br/>
@@ -29,7 +29,7 @@
 							<b>Released To</b>
 						</div>
 						<div class="col-md-8">
-							<input type="text" id="recipient" class="form-control" placeholder="e.g. Jeff Dalawampu">
+							<input type="text" id="recipient" name="sellPerson" class="form-control" placeholder="e.g. Jeff Dalawampu">
 						</div>
 					</div>
 				</div>
