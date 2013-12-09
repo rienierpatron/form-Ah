@@ -22,7 +22,7 @@
 			$total = $total+$_POST['sub'][$i2];
 			$totalQty = $totalQty+$_POST['qty'][$i2];
 		}
-		$content3 = $content3."</table>";
+		$content3 = $content3."</table><br/>";
 	}else{
 		$content3 = "";
 	}
@@ -60,20 +60,16 @@
     			<td>
     				: ".$_POST['sellPerson']."
     			</td>
-    			<td rowspan=2>
-	    			<div style='border:1px solid black;position:absolute;margin-left:380px;margin-top:120px;width:192px;height:50px;text-align:center;'>
-						<br/>
-						<br/>
-						<a style='text-decoration:none;color:black;'>Signature</a>
-    				</div>
-    			</td>
     		</tr>
     		<tr>
     			<td>
     				<b>Purpose </b>
     			</td>
-    			<td>
+    			<td width='550'>
     				: ".$_POST['sellPurpose']."
+    			</td>
+    			<td style='text-align:center'>
+    				Signature
     			</td>
     		</tr>
     	</table>
@@ -83,19 +79,18 @@
     		<table>
     			<tr>
     			<td>
-    			<table style='width:500px;padding:10px;border:1px solid #CCC;border-collapse:collapse;'>
-    				<tr style='background:#CCC;'>
-    					<th style='width:70px;padding-top:10px;padding-bottom:10px;text-align:center'>Qty</th>
-    					<th style='width:93px;padding-top:10px;padding-bottom:10px;text-align:center'>Size</th>
-    					<th style='width:100px;padding-top:10px;padding-bottom:10px;text-align:center'>Color</th>
-    					<th style='width:100px;padding-top:10px;padding-bottom:10px;text-align:center'>Sub (PHP)</th>
-    				</tr>
-    				".$content2."
-    			</table>
+	    			<table style='width:500px;padding:10px;border:1px solid #CCC;border-collapse:collapse;'>
+	    				<tr style='background:#CCC;'>
+	    					<th style='width:70px;padding-top:10px;padding-bottom:10px;text-align:center'>Qty</th>
+	    					<th style='width:93px;padding-top:10px;padding-bottom:10px;text-align:center'>Size</th>
+	    					<th style='width:100px;padding-top:10px;padding-bottom:10px;text-align:center'>Color</th>
+	    					<th style='width:100px;padding-top:10px;padding-bottom:10px;text-align:center'>Sub (PHP)</th>
+	    				</tr>
+	    				".$content2."
+	    			</table>
     			</td>
     			<td>
     				".$content3."
-    				<br/>
     				<table style='width:400px;border-collapse;collapse;margin-top:10px;'>
     					<tr style='background:#CCC;'>
     						<th style='width:179px;padding-top:10px;padding-bottom:10px;text-align:center'>Total Qty : ".$totalQty."</th>
@@ -143,20 +138,16 @@
     			<td>
     				: ".$_POST['sellPerson']."
     			</td>
-    			<td rowspan=2>
-	    			<div style='border:1px solid black;position:absolute;margin-left:380px;margin-top:645px;width:192px;height:50px;text-align:center;'>
-						<br/>
-						<br/>
-						<a style='text-decoration:none;color:black;'>Signature</a>
-    				</div>
-    			</td>
     		</tr>
     		<tr>
     			<td>
     				<b>Purpose </b>
     			</td>
-    			<td>
+    			<td width='550'>
     				: ".$_POST['sellPurpose']."
+    			</td>
+    			<td style='text-align:center'>
+    				Signature
     			</td>
     		</tr>
     	</table>
@@ -178,7 +169,6 @@
     			</td>
     			<td>
     				".$content3."
-    				<br/>
     				<table style='width:400px;border-collapse;collapse;margin-top:10px;'>
     					<tr style='background:#CCC;'>
     						<th style='width:179px;padding-top:10px;padding-bottom:10px;text-align:center'>Total Qty : ".$totalQty."</th>
