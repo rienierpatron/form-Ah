@@ -56,6 +56,13 @@
 								<option value="red">Red</option>
 								<option value="black">Black</option>
 								<option value="white">White</option>
+								<option value="pink">Pink</option>
+								<option value="yellow">Yellow</option>
+								<option value="gray">Gray</option>
+								<option value="ltblue">Lt. Blue</option>
+								<option value="violet">Violet</option>
+								<option value="orange">Orange</option>
+								<option value="ltgreen">Lt. Green</option>
 							</select>
 						</div>
 						<div class="col-md-2">

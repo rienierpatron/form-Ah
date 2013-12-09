@@ -35,7 +35,7 @@
 	}
     $content = "
 <page>
-    <div style='border:1px solid black'>
+    <div style='border:1px solid black;height:486px'>
 
     	<h4 style='text-align:center'>
     		ZERESOFT SOFTWARE DEVELOPMENT AND SERVICES
@@ -111,9 +111,7 @@
     	</div>
     </div>
     <br/>
-    <br/>
-    <br/>
-    <div style='border:1px solid black'>
+    <div style='border:1px solid black;height:500px'>
 
     	<h4 style='text-align:center'>
     		ZERESOFT SOFTWARE DEVELOPMENT AND SERVICES
@@ -190,7 +188,7 @@
     </div>
 </page>
 <page>
-	<div style='border:1px solid black'>
+	<div style='border:1px solid black;height:486px'>
     	<div>
     		
     		<table>
