@@ -11,7 +11,7 @@
 							<b>Selling Date</b>
 						</div>
 						<div class="col-md-8">
-							<input type="date" id="date" name="sellDate" class="datepicker">
+							<input type="date" name="sellDate" id="date" class="datepicker">
 						</div>
 					</div>
 					<br/>
@@ -20,7 +20,7 @@
 							<b>Selling Purpose</b>
 						</div>
 						<div class="col-md-8">
-							<input type="text" id="purpose" name="sellPurpose" class="form-control" placeholder="e.g. Tagbond Event">
+							<input type="text" name="sellPurpose" id="purpose" class="form-control" placeholder="e.g. Tagbond Event">
 						</div>
 					</div>
 					<br/>
@@ -35,7 +35,7 @@
 				</div>
 				<hr class="divider">
 				<div class="header">
-				<h4>Add Item</h4>
+				<h4>Add Band Item</h4>
 				</div>
 				<div class="add-item">
 					<div class="row">
